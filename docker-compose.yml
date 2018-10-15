@@ -1,11 +1,31 @@
+# version: '3'
+# services:
+#   app:
+#     container_name: docker-node-mongo
+#     restart: always
+#     build:
+#       context: .
+#       dockerfile: DockerFile
+#     ports:
+#       - '80:3000' # port local port 80 to container port 3000
+#     links:
+#       - mongo  # link app service to mongo service
+#   mongo:
+#     container_name: mongo
+#     image: mongo  # pull the image from dockerhub
+#     ports:
+#       - '27017:27017'
+
+
 version: '3'
 services:
   app:
     container_name: docker-node-mongo
-    restart: always
-    build: .
+    build:
+      context: .
+      dockerfile: DockerFile
     ports:
-      - '80:3000'
+      - '49161:3000'
     links:
       - mongo
   mongo:
