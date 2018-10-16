@@ -23,7 +23,7 @@ services:
     container_name: docker-node-mongo
     build:
       context: .
-      dockerfile: DockerFile
+      dockerfile: Dockerfile
     ports:
       - '49161:3000'
     links:
